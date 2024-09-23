@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="about-page">
+
+
+<header>
+    <nav>
+        <div class="navbar-toggle">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul>
+            <li><a href="index.html" class="nav-link">Inicio</a></li>
+            <li><a href="about.html" class="nav-link">Sobre Mí</a></li>
+            <li><a href="resume.html" class="nav-link">Currículum</a></li>
+            <li><a href="services.html" class="nav-link">Servicios</a></li>
+            <li><a href="testimonios.html" class="nav-link">Testimonios</a></li>
+            <li><a href="blog.html" class="nav-link">Blog</a></li>
+            <li><a href="contact.html" class="nav-link">Contacto</a></li>
+            <li><a href="skills.html" class="nav-link">Habilidades</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<main>
+    <section class="intro">
+        <div class="text-content">
+            <p>Me llamo Valente Franco, tengo 24 años. Estudié tres años en la Universidad Nacional de General Sarmiento la Licenciatura en Sistemas y este es mi primer cuatrimestre en la UADE. Me cambié para poder cursar de manera remota a causa del trabajo de tiempo completo como Desarrollador Fullstack.</p>
+            <p>Trabajo como desarrollador full-stack hace dos años y como mesa de ayuda otro año antes de eso. Aprendí a utilizar tecnologías como Java y Python para el Backend, junto con Spring y SpringBoot y con Javascript con Angular para el Frontend.</p>
+        </div>
+        <div class="image-content">
+            <img src="resources/img/FotoAutoEntrevista.jpeg" alt="Foto de Valente Franco Gabriel">
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>Derechos Reservados 2024</p>
+</footer>
+</body>
+<script>
+    // Selecciona los elementos de la barra de navegación y el ícono de menú
+    document.addEventListener("DOMContentLoaded", function() {
+        const toggleButton = document.querySelector(".navbar-toggle");
+        const navLinks = document.querySelector(".nav-links");
+
+        // Agrega un evento de clic al botón del menú hamburguesa
+        toggleButton.addEventListener("click", function() {
+            navLinks.classList.toggle("active");
+        });
+    });
+</script>
+
+
+</html>

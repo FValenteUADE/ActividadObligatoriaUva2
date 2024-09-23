@@ -1,0 +1,389 @@
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9fff5; /* Color de fondo */
+  color: #333;
+}
+
+header {
+  background-color: #e54b4b; /* Fondo rojo del navbar */
+  padding: 15px 0;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Active link styling based on body class */
+body.index-page nav ul li a[href="index.html"],
+body.about-page nav ul li a[href="about.html"],
+body.resume-page nav ul li a[href="resume.html"],
+body.services-page nav ul li a[href="services.html"],
+body.testimonios-page nav ul li a[href="testimonios.html"],
+body.blog-page nav ul li a[href="blog.html"],
+body.contact-page nav ul li a[href="contact.html"],
+body.skills-page nav ul li a[href="skills.html"] {
+  color: black; /* Resaltar enlace activo en negro */
+}
+
+main {
+  padding: 20px;
+  min-height: 80vh; /* Altura mínima para el contenido principal */
+  background-color: #f9fff5;
+}
+
+footer {
+  background-color: #243b55; /* Fondo azul oscuro */
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  max-width: 1280px;
+  margin: 0 auto; /* Centrar el contenido */
+}
+
+.text-content {
+  width: 60%;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.image-content {
+  width: 35%;
+  text-align: center;
+}
+
+.image-content img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px; /* Para bordes redondeados, opcional */
+}
+
+/* Estilo responsive para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .intro {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-content, .image-content {
+    width: 100%;
+  }
+
+  .image-content {
+    margin-top: 20px;
+  }
+}
+
+.experience .job {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.job img {
+  max-width: 150px;
+  margin-right: 20px;
+  align-self: flex-start;
+}
+
+.job .description {
+  max-width: 800px;
+  text-align: left;
+}
+
+.job ul {
+  margin-top: 10px;
+}
+
+.download {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.download a {
+  color: #e54b4b;
+  text-decoration: none;
+}
+
+.download a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  text-align: left;
+  display: inline-block;
+  margin-top: 0;
+}
+
+ul li {
+  color: #333;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.main-servicios {
+  padding: 20px;
+  text-align: center;
+}
+
+.testimonios-main {
+  padding: 20px;
+}
+
+.testimonios-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.project {
+  width: 30%;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.project-header {
+  text-align: center;
+}
+
+.project-body {
+  text-align: center;
+}
+
+.project h3 {
+  color: #333;
+}
+
+.logo {
+  height: 150px;
+  width: 300px;
+  object-fit: contain;
+  display: block;
+  margin: 10px auto;
+}
+
+.coworker-photo {
+  height: 150px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  margin: 10px auto;
+}
+
+.coworker-name {
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.testimonial-text {
+  color: #333;
+  font-size: 16px;
+  text-align: center;
+}
+
+.blog-main {
+  padding: 20px;
+}
+
+.blog-content {
+  max-width: fit-content;
+  margin: 0 auto;
+  padding-bottom: 50px; /* espacio para el footer fijo */
+}
+
+.blog-title {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.blog-subtitle {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.blog-post {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  padding: 20px;
+}
+
+.blog-post-title {
+  color: #333;
+  margin-bottom: 10px; /* Espacio entre título y fecha */
+}
+
+.blog-post-date {
+  color: #999;
+  font-size: 14px;
+  margin-top: -10px; /* Ajustar según sea necesario */
+}
+
+.blog-post-text {
+  color: #333;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.blog-post-link a {
+  color: #e54b4b;
+  text-decoration: none;
+}
+
+.contact-main {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-bottom: 50px; /* espacio para el footer fijo */
+}
+
+.section-title, .section-subtitle {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.section-subtitle {
+  margin-top: 40px;
+}
+
+.contact-form {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.contact-form .form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.contact-form label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.contact-form button {
+  background-color: #e53935;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #d32f2f;
+}
+
+.contact-info {
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+  color: #333;
+}
+
+.skills-main {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-bottom: 50px; /* espacio para el footer fijo */
+}
+
+.skills-article {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.skills-article ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skills-article li {
+  margin-bottom: 10px;
+}
+
+.skills-article strong {
+  color: #e53935;
+}
+
+.skills-article p {
+  color: #333;
+}
+.nav-links.active {
+  display: block;
+}
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+}
+
+/* Estilo para mostrar el menú hamburguesa */
+.navbar-toggle {
+  display: none; /* Ocultar el toggle por defecto */
+}
+
